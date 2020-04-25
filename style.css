@@ -1,0 +1,50 @@
+
+body {
+   background-color: #fff;
+   padding: 0px;
+   margin: 0px;
+}
+.menu {
+   background-color: #6cd794;
+   box-shadow: 0 4px 4px #0a0a0a55;
+   top: 0;
+   height: 50px;
+   position: fixed;
+   width: 100%;
+}
+.item {
+   color: white;
+   display: inline-block;
+   padding: 1em 10px;
+}
+.item:hover {
+   background-color: black;
+}
+.grid {
+   margin: 5px;
+   margin-top: 60px;
+   text-align: center;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+.menu a:visited {
+   color: #fff;
+}
+#item {
+   color: black;
+   display: inline-block;
+   background-color: white;
+   box-shadow: 0 0 3px #3838384c;
+   border-radius: 4px;
+   margin: 5px;
+   width: 120px;
+}
+img {
+   display: block;
+   width: 100px;
+   height: 100px;
+   margin: 10px auto;
+   background-position: center center;
+}
