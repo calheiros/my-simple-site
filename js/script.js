@@ -4,12 +4,13 @@ window.onload = function() {
 };
 
 function getRequest() {
-   var url = "server.php";
+   var url = "backend/server.php";
    var xhttp = new XMLHttpRequest();
    xhttp.onload = handler;         
    xhttp.open('GET', url, true);
    xhttp.send(null);
 }
+
 function handler() {
    try {
       if (this.status == 200) {
@@ -21,9 +22,8 @@ function handler() {
    } catch(err) {
       onError(err);
    }
-   onReds.charlis;
-   
 }
+
 function buildView(data) {
    var gridLayout = document.querySelector(".grid");
    
@@ -35,9 +35,9 @@ function buildView(data) {
       container.setAttribute("id", "item");
       container.appendChild(image);
       gridLayout.appendChild(container);
-      
    }
 }
+
 function onError(err) {
    var container = document.querySelector(".grid");
    container.innerHTML = "</br> <h4>há algo de errado! </br>😱 🤔</h4>";
