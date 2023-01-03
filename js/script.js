@@ -1,4 +1,4 @@
-//script.js
+
 window.onload = function() {
    getRequest();
 };
@@ -14,10 +14,8 @@ function getRequest() {
 function handler() {
    try {
       if (this.status == 200) {
-         var json = JSON.parse(this.responseText);
+         var json = JSON.parse(this.responseText).data;
          buildView(json);
-      } else {
-         onError();
       }
    } catch(err) {
       onError(err);
@@ -30,9 +28,9 @@ function buildView(data) {
    for (var x in data) {
       var container = document.createElement("div");
       var image = document.createElement("img");
-      
+           
       image.style.backgroundImage = "url('" + data[x].src + "')";
-      container.setAttribute("id", "item");
+      container.setAttribute("id", "image_item");
       container.appendChild(image);
       gridLayout.appendChild(container);
    }

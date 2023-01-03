@@ -1,45 +1,63 @@
 
 body {
-   background-color: #fff;
+   background-color: rgb(33, 35, 36);
    padding: 0px;
    margin: 0px;
 }
+
 .menu {
-   background-color: #6cd794;
+   font-family: 'Courier New', Courier, monospace;
+   background-color: #66c98a;
    box-shadow: 0 4px 4px #0a0a0a55;
    top: 0;
    height: 50px;
    position: fixed;
    width: 100%;
 }
+
 .item {
-   color: white;
+   color: rgb(48, 46, 46);
    display: inline-block;
    padding: 1em 10px;
 }
+
 .item:hover {
-   background-color: black;
+   box-shadow: inset 2px 2px 4px #0a0a0a55;
+   background-color: rgba(0, 0, 0, 0.103);
 }
+
+#text-section {
+   margin-top: 60px;
+   padding-left: 10px;
+}
+
 .grid {
    margin: 5px;
-   margin-top: 60px;
+   margin-top: 30px;
    text-align: center;
 }
+
 .menu a {
-  color: white;
+   color: rgb(48, 46, 46);
   text-decoration: none;
 }
+
 .menu a:visited {
-   color: #fff;
+   color: rgb(48, 46, 46);
 }
-#item {
+
+#image_item {
    color: black;
    display: inline-block;
-   background-color: white;
+   background-color: rgb(60, 64, 66);
    box-shadow: 0 0 3px #3838384c;
    border-radius: 4px;
    margin: 5px;
    width: 120px;
+   transition: all .1s ease-in-out;
+}
+#image_item:hover {
+   transform: scale(1.1);
 }
 img {
    display: block;
@@ -47,4 +65,19 @@ img {
    height: 100px;
    margin: 10px auto;
    background-position: center center;
+}
+
+@media (min-width: 600px) {
+   .grid {
+      width: 75%;
+   }
+
+   #text-section {
+      margin-top: 60px;
+      padding-left: 50px;
+   }
+}
+
+p {
+   color: aqua;
 }
