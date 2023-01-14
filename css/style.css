@@ -59,6 +59,7 @@ body {
 #image_item:hover {
    transform: scale(1.1);
 }
+
 img {
    display: block;
    width: 100px;

@@ -1,11 +1,8 @@
-
-window.onload = function() {
-   getRequest();
-};
+window.onload = getRequest();
 
 function getRequest() {
-   var url = "backend/server.php";
-   var xhttp = new XMLHttpRequest();
+   let url = "backend/server.php";
+   let xhttp = new XMLHttpRequest();
    xhttp.onload = handler;         
    xhttp.open('GET', url, true);
    xhttp.send(null);
@@ -18,7 +15,7 @@ function handler() {
          buildView(json);
       }
    } catch(err) {
-      onError(err);
+      errorHandler(err);
    }
 }
 
@@ -36,8 +33,9 @@ function buildView(data) {
    }
 }
 
-function onError(err) {
+function errorHandler(err) {
    var container = document.querySelector(".grid");
    container.innerHTML = "</br> <h4>há algo de errado! </br>😱 🤔</h4>";
    console.log(err);
 }
+
